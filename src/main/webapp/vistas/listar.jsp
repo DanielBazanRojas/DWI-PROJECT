@@ -4,8 +4,12 @@
 <%@ page import="java.util.Iterator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    if(session.getAttribute("nombres")==null){
+    String nombres = (String) session.getAttribute("nombres");
+    String link = null;
+    if (nombres == null) {
         response.sendRedirect("vistas/login.jsp");
+    } else {
+        link = "Controlador?accion=add&usuario=" + nombres;
     }
 %>
 <html>
@@ -15,7 +19,7 @@
 <body>
     <div>
         <h1> Clientes </h1>
-        <a href="Controlador?accion=add">Agregar Nuevo</a>
+        <a href="<%= link %>>">Agregar Nuevo</a>
          <table border="1">
              <thead>
                 <tr>
@@ -46,8 +50,8 @@
                     <td><%=cliente.getCorreo()%></td>
                     <td><%=cliente.getDni()%></td>
                     <td>
-                        <a href="Controlador?accion=editar&id=<%=cliente.getId()%>">Edit</a>
-                        <a href="Controlador?accion=eliminar&id=<%=cliente.getId()%>">Remove</a>
+                        <a href="Controlador?accion=editar&id=<%=cliente.getId()%>&usuario=<%= nombres%>">Edit</a>
+                        <a href="Controlador?accion=eliminar&id=<%=cliente.getId()%>&usuario=<%= nombres%>">Remove</a>
                     </td>
                 </tr>
              <%}%>

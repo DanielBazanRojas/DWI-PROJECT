@@ -1,5 +1,4 @@
 package com.turismPage.Controlador;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,7 +35,8 @@ public class Login extends HttpServlet {
             if (rs.next()) {
                 System.out.println("La consulta SQL se ejecutó correctamente y devolvió al menos un resultado.");
                 sesion.setAttribute("nombres", rs.getString("nombres"));
-                response.sendRedirect(request.getContextPath() + "/index.jsp");
+                String nombres = (String) sesion.getAttribute("nombres");
+                response.sendRedirect(request.getContextPath() + "/index.jsp?usuario=" + nombres);
             } else {
                 System.out.println("La consulta SQL se ejecutó correctamente pero no devolvió ningún resultado.");
                 request.setAttribute("status", "failed");

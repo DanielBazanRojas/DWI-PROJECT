@@ -46,11 +46,5 @@
 
     </div>
 </div>
-<script type="text/javascript">
-    var status = document.getElementById("status").value;
-    if(status == "failed"){
-        swal("Error", "Usuario o contraseña incorrectos", "Hubo un error al iniciar sesion");
-    }
-</script>
 </body>
 </html>

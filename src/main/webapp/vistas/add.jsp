@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    if(session.getAttribute("nombres")==null){
+    String nombres = (String) session.getAttribute("nombres");
+    if (nombres == null) {
         response.sendRedirect("vistas/login.jsp");
     }
 %>
