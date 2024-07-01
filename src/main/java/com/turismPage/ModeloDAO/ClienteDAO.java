@@ -1,7 +1,7 @@
 package com.turismPage.ModeloDAO;
 
 import com.turismPage.Config.Conexion;
-import com.turismPage.Interfaces.CRUD;
+import com.turismPage.Interfaces.CRUDClient;
 import com.turismPage.Modelo.Cliente;
 
 import java.sql.Connection;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClienteDAO implements CRUD {
+public class ClienteDAO implements CRUDClient {
     Conexion cn = new Conexion();
     Connection con;
     PreparedStatement pst;

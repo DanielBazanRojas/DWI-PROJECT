@@ -14,9 +14,9 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>JOYMEYROS TOURS</title>
 </head>
-    <body>
-    <div>
-        <a href="<%=link%>">Listar Cliente</a>
-    </div>
-    </body>
+<body>
+<div>
+    <a href="<%=link%>">Listar Cliente</a>
+</div>
+</body>
 </html>

@@ -15,9 +15,9 @@ import java.util.List;
 @WebServlet("/Controlador")
 public class Controlador extends HttpServlet {
 
-    String listar = "vistas/listar.jsp";
-    String add = "vistas/add.jsp";
-    String edit = "vistas/edit.jsp";
+    String listar = "vistas/Cliente/listarClient.jsp";
+    String add = "vistas/Cliente/addClient.jsp";
+    String edit = "vistas/Cliente/editClient.jsp";
     int id;
     Cliente cli = new Cliente();
     ClienteDAO dao = new ClienteDAO();
